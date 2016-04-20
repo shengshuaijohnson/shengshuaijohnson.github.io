@@ -2,7 +2,7 @@ import json
 import string
 file=open("Border data.json","r")
 file0=open("country-val.json","r")
-file2=open("population909500.json","w")
+file2=open("globe_data.json","w")
 
 border=json.load(file)
 val=json.load(file0)

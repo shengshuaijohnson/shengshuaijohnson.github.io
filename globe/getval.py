@@ -7,18 +7,13 @@ js=json.load(f1)
 
 txt1=js["variables"]
 txt2=js["entityKey"]
-
 num=txt1.keys()[0]
-print type(str(num))
+
 entities_data=txt1[num]["entities"]
 years_data=txt1[num]["years"]
 values_data=txt1[num]["values"]
 
-string1=(json.dumps(txt1)+"\n")
-string2=(json.dumps(txt2)+"\n")
-string3=(json.dumps(entities_data)+"\n")
-string4=(json.dumps(years_data)+"\n")
-string5=(json.dumps(values_data)+"\n")
+
 #every code in entitles represent the contry_code which is defined in txt2,then is the years and values,easy to understand
 items={}
 for i in range(len(years_data)):
@@ -28,6 +23,11 @@ for i in range(len(years_data)):
 
 string9=json.dumps(items)
 """
+string1=(json.dumps(txt1)+"\n")
+string2=(json.dumps(txt2)+"\n")
+string3=(json.dumps(entities_data)+"\n")
+string4=(json.dumps(years_data)+"\n")
+string5=(json.dumps(values_data)+"\n")
 description   NULL
 entities    ****
 created_at  time
@@ -39,9 +39,6 @@ id          183
 unit   %
 name          Poverty headcount at $1.90 a day (2011 PPP)
 """
-
-
-
 
 
 
