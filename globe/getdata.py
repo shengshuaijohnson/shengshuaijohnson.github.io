@@ -30,7 +30,7 @@ for name in val2:
                 ultimat.append(i)
                 flag+=1
                 if flag==2:
-                    ultimat.append(0.10*the_val)
+                    ultimat.append(0.05*the_val)
                     flag=0
 style=[]
 style.append("1990")
