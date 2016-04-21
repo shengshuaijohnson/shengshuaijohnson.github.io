@@ -2,8 +2,8 @@ import json
 import string
 file=open("Border data.json","r")
 file0=open("country-val.json","r")
-file2=open("globe_data.json","w")
 
+file3=open("name.json","r")
 border=json.load(file)
 val=json.load(file0)
 
@@ -37,29 +37,13 @@ style.append("1990")
 style.append(ultimat)
 ultimat=[]
 ultimat.append(style)
-
+dataset_name=file3.read()
+dataset_name="data/"+dataset_name+".json"
+print dataset_name
+file2=open(dataset_name,"w")
 file2.write(json.dumps(ultimat))
-"""
 
-for i in range(len(con)):
-    if (con[i]!=''):
-        items.append(string.atof(con[i]))
-        flag+=1
-        if(flag==2):
-            flag=0
-            items.append(0.3)
-print items
-
-
-
-
-pos=0
-while(pos<len(items)):
-    (items[pos],items[pos+1])=(items[pos+1],items[pos])
-    pos+=3
-
-
-"""
 file.close()
 file0.close()
 file2.close()
+file3.close()
