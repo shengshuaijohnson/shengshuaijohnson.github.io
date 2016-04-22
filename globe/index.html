@@ -161,7 +161,13 @@
       var xhr;
       TWEEN.start();
       
-      file_name='/globe/data/Poverty headcount at $1.90 a day (2011 PPP).json';
+      var my_url=window.location.href;
+      var my_pos=my_url.indexOf('=');
+      my_file_name=my_url.substring(my_pos+1);
+
+
+
+      file_name='/globe/data/'+my_file_name+'.json';
       xhr = new XMLHttpRequest();
       xhr.open('GET', file_name, true);
       xhr.onreadystatechange = function(e) {
