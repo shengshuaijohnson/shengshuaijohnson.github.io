@@ -114,11 +114,13 @@
   </div>
 
   <div id="title">
-    World Poverty  
+  <a href="../404.html">
+    Go back 
+  </a>
   </div>
 
   <a id="ce" href="http://www.chromeexperiments.com/globe">
-    <span>This is a Chrome Experiment</span>
+    <span>This is a Chrome Experiment!</span>
   </a>
 
   <script type="text/javascript" src="/globe/third-party/Detector.js"></script>
@@ -163,7 +165,9 @@
       
       var my_url=window.location.href;
       var my_pos=my_url.indexOf('=');
-      my_file_name=my_url.substring(my_pos+1);
+      var  my_file_name=my_url.substring(my_pos+1);
+     
+      if (my_pos<0) my_file_name='Poverty headcount at $1.90 a day (2011 PPP)';
 
 
 
